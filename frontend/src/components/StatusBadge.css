@@ -1,0 +1,45 @@
+.status-badge-wrapper {
+  display: inline-flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.status-badge-wrapper.small .status-badge-modern {
+  padding: 4px 10px;
+  font-size: 0.8rem;
+}
+
+.status-badge-wrapper.medium .status-badge-modern {
+  padding: 6px 15px;
+  font-size: 0.9rem;
+}
+
+.status-badge-wrapper.large .status-badge-modern {
+  padding: 8px 20px;
+  font-size: 1rem;
+}
+
+.status-badge-modern {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  border-radius: 30px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  cursor: default;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.status-icon {
+  font-size: 1.1em;
+}
+
+.status-message {
+  font-size: 0.9rem;
+  padding: 8px 12px;
+  background: #F8FAFC;
+  border-radius: 8px;
+  max-width: 300px;
+  line-height: 1.4;
+  border-left: 3px solid currentColor;
+}

@@ -1,0 +1,267 @@
+/* ServicosAdmin.css */
+.header-pagina {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.titulo-pagina {
+  color: #0B4F6C;
+  font-size: 24px;
+  margin: 0;
+}
+
+.btn-add {
+  background: #0B4F6C;
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-add:hover {
+  background: #1287A8;
+  transform: translateY(-2px);
+}
+
+.tabela-servicos {
+  width: 100%;
+  background: white;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+}
+
+.tabela-servicos thead {
+  background: #0B4F6C;
+  color: white;
+}
+
+.tabela-servicos th {
+  padding: 15px;
+  text-align: left;
+  font-weight: 600;
+}
+
+.tabela-servicos td {
+  padding: 15px;
+  border-bottom: 1px solid #E2E8F0;
+  vertical-align: middle;
+}
+
+.img-servico {
+  width: 60px;
+  height: 60px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.img-placeholder {
+  width: 60px;
+  height: 60px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  color: white;
+}
+
+.badge-categoria {
+  display: inline-block;
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.descricao-cell {
+  max-width: 250px;
+  color: #64748B;
+}
+
+.btn-editar, .btn-excluir {
+  padding: 6px 15px;
+  border: none;
+  border-radius: 5px;
+  font-size: 13px;
+  cursor: pointer;
+  margin-right: 5px;
+  transition: all 0.3s ease;
+}
+
+.btn-editar {
+  background: #FFD93D;
+  color: #0B4F6C;
+}
+
+.btn-editar:hover {
+  background: #f3d13a;
+  transform: translateY(-2px);
+}
+
+.btn-excluir {
+  background: #e74c3c;
+  color: white;
+}
+
+.btn-excluir:hover {
+  background: #c0392b;
+  transform: translateY(-2px);
+}
+
+/* Modal */
+.modal-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+}
+
+.modal-box {
+  background: white;
+  padding: 30px;
+  border-radius: 20px;
+  width: 90%;
+  max-width: 600px;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+.modal-box h3 {
+  color: #0B4F6C;
+  margin-bottom: 25px;
+  font-size: 22px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  color: #2C3E50;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 12px 15px;
+  border: 2px solid #E2E8F0;
+  border-radius: 10px;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #FFD93D;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+
+.preview-container {
+  margin: 15px 0;
+  text-align: center;
+}
+
+.preview-img {
+  max-width: 200px;
+  max-height: 150px;
+  border-radius: 10px;
+  border: 2px solid #E2E8F0;
+}
+
+.modal-buttons {
+  display: flex;
+  gap: 15px;
+  margin-top: 25px;
+}
+
+.btn-salvar, .btn-fechar {
+  flex: 1;
+  padding: 14px;
+  border: none;
+  border-radius: 10px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-salvar {
+  background: #0B4F6C;
+  color: white;
+}
+
+.btn-salvar:hover {
+  background: #1287A8;
+  transform: translateY(-2px);
+}
+
+.btn-fechar {
+  background: #E2E8F0;
+  color: #2C3E50;
+}
+
+.btn-fechar:hover {
+  background: #CBD5E0;
+}
+
+@media (max-width: 768px) {
+  .tabela-servicos {
+    display: block;
+    overflow-x: auto;
+  }
+  
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+  
+  .modal-box {
+    padding: 20px;
+  }
+}
+
+/* Adicione no final do arquivo */
+.erro-mensagem {
+  background: #fee;
+  color: #c00;
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 15px;
+  border-left: 4px solid #c00;
+}
+
+.form-group small {
+  display: block;
+  margin-top: 5px;
+  color: #64748B;
+  font-size: 12px;
+}
+
+.img-servico {
+  width: 60px;
+  height: 60px;
+  border-radius: 8px;
+  object-fit: cover;
+}

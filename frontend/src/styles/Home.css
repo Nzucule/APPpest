@@ -1,0 +1,471 @@
+/* Home.css */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', 'Segoe UI', sans-serif;
+  background-color: #F8FAFC;
+  color: #2C3E50;
+}
+
+/* Banner Principal */
+.home-banner {
+  background: linear-gradient(135deg, #0B4F6C 0%, #1287A8 100%);
+  height: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Padrão decorativo com CSS puro */
+.home-banner::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at 30% 50%, rgba(255,255,255,0.1) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+.home-banner::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100px;
+  background: linear-gradient(to top, #F8FAFC, transparent);
+}
+
+.home-banner-content {
+  max-width: 800px;
+  padding: 2rem;
+  animation: fadeInUp 1s ease;
+  position: relative;
+  z-index: 2;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.home-banner-content h1 {
+  font-size: 3.5rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.home-banner-content p {
+  font-size: 1.4rem;
+  margin-bottom: 2rem;
+  opacity: 0.95;
+  line-height: 1.6;
+}
+
+.banner-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.home-button {
+  padding: 1rem 2.5rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 50px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  border: none;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  display: inline-block;
+}
+
+.home-button:first-child {
+  background: #FFD93D;
+  color: #0B4F6C;
+  box-shadow: 0 4px 15px rgba(255, 217, 61, 0.3);
+}
+
+.home-button:first-child:hover {
+  background: #FFE55C;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(255, 217, 61, 0.4);
+}
+
+.home-button.secondary {
+  background: transparent;
+  color: white;
+  border: 2px solid white;
+}
+
+.home-button.secondary:hover {
+  background: white;
+  color: #0B4F6C;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(255, 255, 255, 0.2);
+}
+
+/* Seção Serviços */
+.home-services {
+  padding: 5rem 2rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.home-services h2 {
+  text-align: center;
+  font-size: 2.8rem;
+  color: #0B4F6C;
+  margin-bottom: 1rem;
+  position: relative;
+  font-weight: 700;
+}
+
+.home-services h2::after {
+  content: '';
+  display: block;
+  width: 80px;
+  height: 4px;
+  background: #FFD93D;
+  margin: 1rem auto;
+  border-radius: 2px;
+}
+
+.section-subtitle {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #64748B;
+  margin-bottom: 3rem;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2.5rem;
+  margin-top: 2rem;
+}
+
+.service-card {
+  background: white;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  cursor: pointer;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+}
+
+.service-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(11, 79, 108, 0.1);
+}
+
+/* Placeholder para quando não há imagem */
+.service-img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  background: linear-gradient(135deg, #0B4F6C, #1287A8);
+  transition: transform 0.5s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 3rem;
+}
+
+.service-card:hover .service-img {
+  transform: scale(1.05);
+}
+
+/* Fallback se a imagem não carregar */
+.service-img[alt] {
+  position: relative;
+}
+
+.service-img[alt]::before {
+  content: '🔬';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 4rem;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.service-card h3 {
+  font-size: 1.8rem;
+  color: #0B4F6C;
+  margin: 1.5rem 1.5rem 0.5rem;
+  font-weight: 600;
+}
+
+.service-price {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #FFD93D;
+  margin: 0 1.5rem 0.5rem;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.service-description {
+  color: #64748B;
+  line-height: 1.6;
+  margin: 0 1.5rem 1.5rem;
+  font-size: 1rem;
+  flex-grow: 1;
+}
+
+.btn-agendar {
+  background: linear-gradient(135deg, #0B4F6C, #1287A8);
+  color: white;
+  border: none;
+  padding: 1rem 2rem;
+  width: 100%;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  margin-top: auto;
+}
+
+.btn-agendar:hover {
+  background: linear-gradient(135deg, #0D5A7A, #1496BB);
+  letter-spacing: 2px;
+}
+
+.view-all-container {
+  text-align: center;
+  margin-top: 4rem;
+}
+
+.view-all-btn {
+  display: inline-block;
+  padding: 1rem 3rem;
+  background: transparent;
+  color: #0B4F6C;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.2rem;
+  border: 2px solid #0B4F6C;
+  border-radius: 50px;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.view-all-btn:hover {
+  background: #0B4F6C;
+  color: white;
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(11, 79, 108, 0.3);
+}
+
+/* Seção CTA */
+.home-cta {
+  background: linear-gradient(135deg, #0B4F6C 0%, #064154 100%);
+  padding: 5rem 2rem;
+  color: white;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.home-cta::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: repeating-linear-gradient(45deg, rgba(255,255,255,0.02) 0px, rgba(255,255,255,0.02) 10px, transparent 10px, transparent 20px);
+  pointer-events: none;
+}
+
+.cta-content {
+  max-width: 800px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.cta-content h2 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.cta-content p {
+  font-size: 1.3rem;
+  margin-bottom: 2.5rem;
+  opacity: 0.95;
+}
+
+.cta-buttons {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+}
+
+.cta-button {
+  padding: 1.2rem 3rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 50px;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  display: inline-block;
+}
+
+.cta-button:first-child {
+  background: #FFD93D;
+  color: #0B4F6C;
+  box-shadow: 0 4px 15px rgba(255, 217, 61, 0.3);
+}
+
+.cta-button:first-child:hover {
+  background: #FFE55C;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(255, 217, 61, 0.4);
+}
+
+.cta-button.secondary {
+  background: transparent;
+  color: white;
+  border: 2px solid white;
+}
+
+.cta-button.secondary:hover {
+  background: white;
+  color: #0B4F6C;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(255, 255, 255, 0.2);
+}
+
+.loading {
+  text-align: center;
+  font-size: 1.3rem;
+  color: #0B4F6C;
+  padding: 3rem;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .home-banner {
+    height: 500px;
+  }
+  
+  .home-banner-content h1 {
+    font-size: 2.2rem;
+  }
+  
+  .home-banner-content p {
+    font-size: 1.1rem;
+  }
+  
+  .banner-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .home-button {
+    width: 100%;
+    max-width: 280px;
+    text-align: center;
+  }
+  
+  .services-grid {
+    grid-template-columns: 1fr;
+    padding: 0 1rem;
+  }
+  
+  .service-card {
+    max-width: 400px;
+    margin: 0 auto;
+  }
+  
+  .home-services h2 {
+    font-size: 2.2rem;
+  }
+  
+  .cta-content h2 {
+    font-size: 2rem;
+  }
+  
+  .cta-content p {
+    font-size: 1.1rem;
+  }
+  
+  .cta-buttons {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  .cta-button {
+    width: 100%;
+    max-width: 280px;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .home-banner {
+    height: 450px;
+  }
+  
+  .home-banner-content h1 {
+    font-size: 1.8rem;
+  }
+  
+  .home-banner-content p {
+    font-size: 1rem;
+  }
+  
+  .service-card h3 {
+    font-size: 1.5rem;
+  }
+  
+  .service-price {
+    font-size: 1.6rem;
+  }
+  
+  .view-all-btn {
+    padding: 0.8rem 2rem;
+    font-size: 1rem;
+  }
+}

@@ -1,0 +1,399 @@
+/* ======== CONTAINER PRINCIPAL ======== */
+.users-container {
+  padding: 20px;
+}
+
+/* ======== HEADER COM PESQUISA ======== */
+.users-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+/* ======== TÍTULOS ======== */
+.titulo-admin {
+  margin: 0;
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #0B4F6C;
+}
+
+/* ======== CAMPO DE PESQUISA ======== */
+.pesquisa-container {
+  position: relative;
+  min-width: 300px;
+  flex: 1;
+  max-width: 400px;
+}
+
+.pesquisa-input {
+  width: 100%;
+  padding: 12px 40px 12px 15px;
+  border: 2px solid #E2E8F0;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  transition: all 0.2s;
+  background: white;
+}
+
+.pesquisa-input:focus {
+  outline: none;
+  border-color: #0B4F6C;
+  box-shadow: 0 0 0 3px rgba(11, 79, 108, 0.1);
+}
+
+.pesquisa-input::placeholder {
+  color: #94A3B8;
+}
+
+.limpar-pesquisa {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  color: #94A3B8;
+  font-size: 1.2rem;
+  cursor: pointer;
+  padding: 0 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s;
+}
+
+.limpar-pesquisa:hover {
+  color: #e74c3c;
+}
+
+/* ======== BOTÃO DE ADICIONAR ======== */
+.new-btn {
+  background: linear-gradient(135deg, #27ae60, #2ecc71);
+  color: #fff;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.new-btn:hover {
+  transform: scale(1.05);
+  background: linear-gradient(135deg, #2ecc71, #27ae60);
+}
+
+/* ======== TABELA ======== */
+.users-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0 8px;
+}
+
+.users-table thead th {
+  background: #0B4F6C;
+  color: #fff;
+  padding: 14px;
+  font-weight: 500;
+  text-align: left;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.users-table thead th:first-child {
+  border-radius: 8px 0 0 8px;
+}
+
+.users-table thead th:last-child {
+  border-radius: 0 8px 8px 0;
+}
+
+.users-table tbody tr {
+  background: #fff;
+  box-shadow: 0px 3px 10px rgba(0,0,0,0.07);
+  transition: 0.2s;
+}
+
+.users-table tbody tr:hover {
+  transform: translateY(-2px);
+  box-shadow: 0px 4px 12px rgba(0,0,0,0.12);
+}
+
+.users-table td {
+  padding: 14px;
+  border-bottom: none;
+}
+
+/* ======== FOTO ======== */
+.user-photo {
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #ecf0f1;
+  box-shadow: 0px 2px 5px rgba(0,0,0,0.1);
+}
+
+/* ======== BOTÕES ======== */
+.edit-btn,
+.delete-btn {
+  padding: 8px 14px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: 0.2s;
+  font-size: 0.85rem;
+}
+
+.edit-btn {
+  background: #3498db;
+  color: #fff;
+}
+.edit-btn:hover {
+  background: #2980b9;
+}
+
+.delete-btn {
+  background: #e74c3c;
+  color: #fff;
+}
+.delete-btn:hover {
+  background: #c0392b;
+}
+
+/* ======== SEM RESULTADOS ======== */
+.sem-resultados {
+  text-align: center;
+  padding: 30px;
+  color: #64748B;
+  font-style: italic;
+  background: #F8FAFC;
+  border-radius: 8px;
+}
+
+.sem-resultados strong {
+  color: #0B4F6C;
+}
+
+.sem-resultados-card {
+  text-align: center;
+  padding: 30px;
+  color: #64748B;
+  background: #F8FAFC;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+/* ======== RESULTADOS INFO ======== */
+.resultados-info {
+  margin-top: 20px;
+  text-align: right;
+  color: #64748B;
+  font-size: 0.85rem;
+  border-top: 1px solid #E2E8F0;
+  padding-top: 15px;
+}
+
+/* ======== MODAL ======== */
+.form-modal {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.35);
+  backdrop-filter: blur(3px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+/* ======== FORM ======== */
+.user-form {
+  background: #fff;
+  padding: 25px;
+  width: 380px;
+  border-radius: 12px;
+  box-shadow: 0px 5px 18px rgba(0,0,0,0.15);
+  animation: slideDown 0.3s ease;
+}
+
+@keyframes slideDown {
+  from { transform: translateY(-15px); }
+  to   { transform: translateY(0); }
+}
+
+.user-form input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 14px;
+  border: 1px solid #ccd1d1;
+  border-radius: 8px;
+  transition: 0.2s;
+}
+
+.user-form input:focus {
+  border-color: #3498db;
+  box-shadow: 0 0 0 2px rgba(52,152,219,0.2);
+}
+
+/* ======== BOTÕES FORM ======== */
+.save-btn,
+.cancel-btn {
+  padding: 12px;
+  width: 100%;
+  border: none;
+  border-radius: 8px;
+  margin-top: 10px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.save-btn {
+  background: #3498db;
+  color: #fff;
+}
+.save-btn:hover {
+  background: #2980b9;
+}
+
+.cancel-btn {
+  background: #e74c3c;
+  color: #fff;
+}
+.cancel-btn:hover {
+  background: #c0392b;
+}
+
+/* ======== MOBILE CARDS ======== */
+.mobile-cards {
+  display: none;
+}
+
+.user-card {
+  background: #fff;
+  padding: 15px;
+  margin-bottom: 12px;
+  border-radius: 12px;
+  box-shadow: 0px 3px 8px rgba(0,0,0,0.1);
+  border-left: 4px solid #0B4F6C;
+}
+
+.user-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.user-card-header h3 {
+  color: #0B4F6C;
+  margin: 0;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.user-card-body p {
+  margin: 5px 0;
+  color: #2C3E50;
+  font-size: 0.9rem;
+}
+
+.user-card-body strong {
+  color: #64748B;
+  font-weight: 500;
+  min-width: 50px;
+  display: inline-block;
+}
+
+/* ======== LOADING ======== */
+.loading-container {
+  text-align: center;
+  padding: 40px;
+  color: #64748B;
+  font-size: 1.1rem;
+}
+
+/* ======== RESPONSIVIDADE ======== */
+@media (max-width: 1024px) {
+  .users-header {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .pesquisa-container {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .users-table {
+    display: none;
+  }
+
+  .mobile-cards {
+    display: block;
+  }
+
+  .users-container {
+    padding: 15px;
+  }
+
+  .titulo-admin {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+
+  .pesquisa-input {
+    padding: 10px 35px 10px 12px;
+    font-size: 0.9rem;
+  }
+
+  .resultados-info {
+    text-align: center;
+    font-size: 0.8rem;
+  }
+
+  .user-card .delete-btn {
+    padding: 6px 12px;
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .users-header {
+    gap: 10px;
+  }
+
+  .pesquisa-input::placeholder {
+    font-size: 0.85rem;
+  }
+
+  .user-card {
+    padding: 12px;
+  }
+
+  .user-card-header h3 {
+    font-size: 1rem;
+  }
+
+  .user-card-body p {
+    font-size: 0.85rem;
+  }
+
+  .resultados-info {
+    margin-top: 15px;
+    padding-top: 10px;
+  }
+}

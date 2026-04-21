@@ -1,0 +1,104 @@
+.timeline-container {
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+  margin: 20px 0;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.timeline-title {
+  color: #2C3E50;
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.status-description {
+  color: #64748B;
+  font-size: 0.95rem;
+  margin-bottom: 20px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #E2E8F0;
+}
+
+.timeline {
+  position: relative;
+  padding-left: 30px;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 12px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: #E2E8F0;
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 25px;
+  display: flex;
+  align-items: flex-start;
+}
+
+.timeline-marker {
+  position: absolute;
+  left: -30px;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 12px;
+  z-index: 2;
+}
+
+.timeline-content {
+  flex: 1;
+  padding-left: 15px;
+}
+
+.timeline-date {
+  font-size: 0.85rem;
+  color: #94A3B8;
+  margin-bottom: 4px;
+}
+
+.timeline-description {
+  color: #2C3E50;
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+.timeline-item.pending .timeline-description {
+  color: #94A3B8;
+}
+
+.info-box {
+  margin-top: 20px;
+  padding: 15px;
+  border-radius: 8px;
+  font-size: 0.95rem;
+}
+
+.info-box.confirmado {
+  background: #e8f5e9;
+  border-left: 4px solid #27ae60;
+  color: #27ae60;
+}
+
+.info-box.termico {
+  background: #fff3e0;
+  border-left: 4px solid #e67e22;
+  color: #e67e22;
+}
+
+.info-box p {
+  margin: 5px 0 0;
+  color: #2C3E50;
+}

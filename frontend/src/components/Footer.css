@@ -1,0 +1,131 @@
+/* Footer.css */
+.footer {
+  background: linear-gradient(135deg, #1E2A3A 0%, #15232E 100%);
+  color: #E2E8F0;
+  padding: 4rem 2rem 1rem;
+  position: relative;
+}
+
+.footer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #FFD93D, #0B4F6C, #FFD93D);
+}
+
+.footer-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1.5fr 1.5fr;
+  gap: 3rem;
+  position: relative;
+}
+
+.footer-section h3 {
+  color: #FFD93D;
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+}
+
+.footer-section h4 {
+  color: #FFD93D;
+  font-size: 1.3rem;
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+  position: relative;
+  padding-bottom: 0.5rem;
+}
+
+.footer-section h4::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 50px;
+  height: 2px;
+  background: #FFD93D;
+}
+
+.footer-section p {
+  line-height: 1.8;
+  color: #A0B3C9;
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 0.8rem;
+  color: #A0B3C9;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.footer-section ul li a {
+  color: #A0B3C9;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+.footer-section ul li a:hover {
+  color: #FFD93D;
+  transform: translateX(5px);
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 1px solid #2A3A4A;
+}
+
+.footer-bottom p {
+  color: #748A9C;
+  font-size: 0.95rem;
+  margin: 0.3rem 0;
+  transition: color 0.3s ease;
+}
+
+.footer-bottom p:hover {
+  color: #FFD93D;
+}
+
+/* Media Queries */
+@media (max-width: 1024px) {
+  .footer-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer {
+    padding: 3rem 1.5rem 1rem;
+  }
+  
+  .footer-container {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  
+  .footer-section h3,
+  .footer-section h4 {
+    margin-bottom: 1rem;
+  }
+  
+  .footer-section ul li {
+    margin-bottom: 0.5rem;
+  }
+}

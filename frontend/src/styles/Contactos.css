@@ -1,0 +1,370 @@
+/* Contactos.css */
+.contactos-banner {
+  background: linear-gradient(135deg, #0B4F6C 0%, #1287A8 100%);
+  color: white;
+  padding: 80px 0;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.contactos-banner::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at 30% 50%, rgba(255,255,255,0.1) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+.contactos-banner h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  color: white;
+  position: relative;
+  z-index: 2;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+}
+
+.contactos-banner p {
+  font-size: 1.2rem;
+  max-width: 600px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+  opacity: 0.95;
+}
+
+.contactos-content {
+  padding: 80px 0;
+  background: #F8FAFC;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.contactos-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+}
+
+.contactos-info h2 {
+  color: #0B4F6C;
+  margin-bottom: 30px;
+  font-size: 2rem;
+  position: relative;
+  padding-bottom: 15px;
+}
+
+.contactos-info h2::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 60px;
+  height: 3px;
+  background: #FFD93D;
+  border-radius: 2px;
+}
+
+.info-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  margin-bottom: 25px;
+  padding: 25px;
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(11, 79, 108, 0.08);
+  transition: all 0.3s ease;
+  border: 1px solid rgba(0,0,0,0.05);
+}
+
+.info-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(11, 79, 108, 0.15);
+  border-color: #FFD93D;
+}
+
+.info-icon {
+  font-size: 2.2rem;
+  background: #F8FAFC;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  color: #0B4F6C;
+  flex-shrink: 0;
+}
+
+.info-content h3 {
+  color: #0B4F6C;
+  margin-bottom: 8px;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.info-content p {
+  color: #64748B;
+  line-height: 1.6;
+  margin: 0;
+  font-size: 1rem;
+}
+
+.redes-sociais {
+  margin-top: 40px;
+}
+
+.redes-sociais h3 {
+  color: #0B4F6C;
+  margin-bottom: 20px;
+  font-size: 1.3rem;
+}
+
+.social-links {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.social-link {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 25px;
+  color: white;
+  text-decoration: none;
+  border-radius: 50px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  flex: 1;
+  min-width: 140px;
+  justify-content: center;
+}
+
+.social-link i {
+  font-size: 1.2rem;
+}
+
+.social-link.facebook {
+  background: #1877f2;
+}
+
+.social-link.instagram {
+  background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+}
+
+.social-link.whatsapp {
+  background: #25d366;
+}
+
+.social-link:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  filter: brightness(1.1);
+}
+
+.contactos-form {
+  background: white;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 10px 40px rgba(11, 79, 108, 0.1);
+}
+
+.contactos-form h2 {
+  color: #0B4F6C;
+  margin-bottom: 30px;
+  font-size: 2rem;
+  position: relative;
+  padding-bottom: 15px;
+}
+
+.contactos-form h2::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 60px;
+  height: 3px;
+  background: #FFD93D;
+  border-radius: 2px;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  color: #0B4F6C;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 12px 15px;
+  border: 2px solid #E2E8F0;
+  border-radius: 10px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  font-family: 'Poppins', sans-serif;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #FFD93D;
+  box-shadow: 0 0 0 4px rgba(255, 217, 61, 0.1);
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: #A0AEC0;
+}
+
+.btn-enviar {
+  width: 100%;
+  padding: 15px 30px;
+  background: #0B4F6C;
+  color: white;
+  border: none;
+  border-radius: 50px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-top: 10px;
+}
+
+.btn-enviar:hover {
+  background: #1287A8;
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(11, 79, 108, 0.3);
+}
+
+.mapa-section {
+  padding: 80px 0;
+  background: white;
+}
+
+.mapa-section h2 {
+  text-align: center;
+  margin-bottom: 50px;
+  font-size: 2.5rem;
+  color: #0B4F6C;
+  position: relative;
+  padding-bottom: 15px;
+}
+
+.mapa-section h2::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 3px;
+  background: #FFD93D;
+  border-radius: 2px;
+}
+
+.mapa-container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.mapa-placeholder {
+  background: #F8FAFC;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 10px 40px rgba(11, 79, 108, 0.1);
+}
+
+.mapa-placeholder h3 {
+  color: #0B4F6C;
+  padding: 20px 30px;
+  margin: 0;
+  font-size: 1.3rem;
+  background: white;
+  border-bottom: 1px solid #E2E8F0;
+}
+
+.mapa-placeholder p {
+  color: #64748B;
+  padding: 0 30px 20px;
+  margin: 0;
+}
+
+.mapa-image {
+  width: 100%;
+  height: 450px;
+}
+
+.mapa-image iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+@media (max-width: 768px) {
+  .contactos-banner h1 {
+    font-size: 2.2rem;
+  }
+  
+  .contactos-banner p {
+    font-size: 1rem;
+    padding: 0 20px;
+  }
+  
+  .contactos-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  
+  .form-row {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+  
+  .social-links {
+    flex-direction: column;
+  }
+  
+  .social-link {
+    width: 100%;
+  }
+  
+  .contactos-form {
+    padding: 30px 20px;
+  }
+  
+  .mapa-section h2 {
+    font-size: 2rem;
+  }
+  
+  .mapa-image {
+    height: 300px;
+  }
+}

@@ -1,0 +1,205 @@
+/* register.css - Altura ajustada com mensagens de erro */
+.register-page {
+  background: linear-gradient(135deg, #0B4F6C 0%, #1287A8 100%);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.register-container {
+  width: 100%;
+  max-width: 440px;
+  margin: 0 auto;
+}
+
+.register-card {
+  background: white;
+  padding: 25px 35px;
+  border-radius: 20px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+  animation: fadeIn 0.7s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.register-card h2 {
+  text-align: center;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #0B4F6C;
+  margin-bottom: 0px;
+}
+
+.subtitle {
+  text-align: center;
+  margin-bottom: 15px;
+  color: #64748B;
+  font-size: 0.95rem;
+}
+
+.subtitle span {
+  color: #FFD93D;
+  font-weight: 600;
+}
+
+/* ===== NOVOS ESTILOS DE ERRO ===== */
+.erro-geral {
+  background: #fee;
+  color: #e74c3c;
+  padding: 12px 15px;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border-left: 4px solid #e74c3c;
+  font-size: 0.95rem;
+}
+
+.erro-icon {
+  font-size: 1.2rem;
+}
+
+.erro-campo {
+  border-color: #e74c3c !important;
+  background: #fff5f5 !important;
+}
+
+.erro-campo:focus {
+  box-shadow: 0 0 0 3px rgba(231, 76, 60, 0.1) !important;
+}
+
+.mensagem-erro {
+  display: block;
+  color: #e74c3c;
+  font-size: 0.8rem;
+  margin-top: 4px;
+  padding-left: 5px;
+}
+
+.input-group {
+  margin-bottom: 15px;
+}
+
+.input-group label {
+  display: block;
+  font-size: 0.9rem;
+  color: #0B4F6C;
+  margin-bottom: 4px;
+  font-weight: 500;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 10px 14px;
+  border-radius: 10px;
+  border: 2px solid #E2E8F0;
+  background: #F8FAFC;
+  color: #2C3E50;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+  font-family: 'Poppins', sans-serif;
+}
+
+.input-group input:focus {
+  outline: none;
+  border-color: #FFD93D;
+  background: white;
+  box-shadow: 0 0 0 3px rgba(255, 217, 61, 0.1);
+}
+
+.input-group input::placeholder {
+  color: #94A3B8;
+  font-size: 0.9rem;
+}
+
+/* Loading spinner */
+.loading-spinner-small {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  border: 2px solid rgba(255,255,255,0.3);
+  border-radius: 50%;
+  border-top-color: white;
+  animation: spin 1s ease-in-out infinite;
+  margin-right: 8px;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.btn-register {
+  width: 100%;
+  background: linear-gradient(135deg, #0B4F6C, #1287A8);
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 40px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 10px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.btn-register:hover:not(:disabled) {
+  background: linear-gradient(135deg, #083d54, #0e6f8c);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(11, 79, 108, 0.25);
+}
+
+.btn-register:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.login-link {
+  text-align: center;
+  margin-top: 15px;
+  color: #64748B;
+  font-size: 0.9rem;
+}
+
+.login-link a {
+  color: #0B4F6C;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.login-link a:hover {
+  color: #FFD93D;
+  text-decoration: underline;
+}
+
+@media (max-width: 480px) {
+  .register-card {
+    padding: 20px 15px;
+  }
+  
+  .register-card h2 {
+    font-size: 1.5rem;
+  }
+  
+  .btn-register {
+    padding: 10px;
+  }
+  
+  .input-group {
+    margin-bottom: 12px;
+  }
+}

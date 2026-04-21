@@ -1,0 +1,662 @@
+/* Sobre.css - Completo e Atualizado */
+
+.sobre-banner {
+  background: linear-gradient(135deg, #0B4F6C 0%, #1287A8 100%);
+  color: white;
+  padding: 100px 0;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.sobre-banner::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at 30% 50%, rgba(255,255,255,0.1) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+.sobre-banner h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  color: white;
+  position: relative;
+  z-index: 2;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+}
+
+.sobre-banner p {
+  font-size: 1.3rem;
+  max-width: 600px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+  opacity: 0.95;
+}
+
+.nossa-historia {
+  padding: 80px 0;
+  background: white;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.historia-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+  align-items: center;
+}
+
+.historia-text h2 {
+  color: #0B4F6C;
+  margin-bottom: 30px;
+  font-size: 2.5rem;
+  position: relative;
+  padding-bottom: 15px;
+}
+
+.historia-text h2::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 80px;
+  height: 3px;
+  background: #FFD93D;
+  border-radius: 2px;
+}
+
+.historia-text p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin-bottom: 20px;
+  color: #2C3E50;
+}
+
+.historia-text strong {
+  color: #0B4F6C;
+}
+
+.historia-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.image-container {
+  width: 100%;
+  height: 450px;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(11, 79, 108, 0.15);
+  position: relative;
+}
+
+.historia-placeholder {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  background: linear-gradient(135deg, #0B4F6C, #1287A8);
+}
+
+.historia-placeholder img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  transition: transform 0.5s ease;
+}
+
+.historia-placeholder:hover img {
+  transform: scale(1.05);
+}
+
+.historia-placeholder p {
+  position: relative;
+  z-index: 2;
+  color: white;
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 30px;
+  padding: 12px 30px;
+  background: rgba(11, 79, 108, 0.85);
+  border-radius: 50px;
+  backdrop-filter: blur(5px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  letter-spacing: 1px;
+}
+
+.historia-placeholder span {
+  display: none;
+}
+
+/* Fallback quando não há imagem */
+.historia-placeholder.no-image {
+  background: linear-gradient(135deg, #0B4F6C20, #1287A820);
+  border: 2px dashed #0B4F6C40;
+  justify-content: center;
+}
+
+.historia-placeholder.no-image p {
+  color: #0B4F6C;
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  backdrop-filter: none;
+  margin-bottom: 0;
+}
+
+.historia-placeholder.no-image span {
+  display: block;
+  font-size: 5rem;
+  color: #0B4F6C;
+  margin-bottom: 20px;
+}
+
+.nossa-missao {
+  padding: 80px 0;
+  background: #F8FAFC;
+}
+
+.missao-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.missao-card {
+  background: white;
+  padding: 40px 30px;
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 0 10px 40px rgba(11, 79, 108, 0.08);
+  transition: all 0.3s ease;
+  border: 1px solid rgba(0,0,0,0.05);
+}
+
+.missao-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 50px rgba(11, 79, 108, 0.15);
+  border-color: #FFD93D;
+}
+
+.missao-icon {
+  font-size: 3.5rem;
+  margin-bottom: 20px;
+  background: #F8FAFC;
+  width: 80px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  margin: 0 auto 25px;
+  color: #0B4F6C;
+}
+
+.missao-card h3 {
+  color: #0B4F6C;
+  margin-bottom: 15px;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.missao-card p {
+  color: #64748B;
+  line-height: 1.7;
+  font-size: 1rem;
+}
+
+
+
+/* ===== EQUIPE TÉCNICA - VERSÃO SIMPLIFICADA ===== */
+.nossa-equipe {
+  padding: 80px 0;
+  background: white;
+}
+
+.nossa-equipe h2 {
+  text-align: center;
+  margin-bottom: 50px;
+  font-size: 2.5rem;
+  color: #0B4F6C;
+  position: relative;
+  padding-bottom: 15px;
+}
+
+.nossa-equipe h2::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 3px;
+  background: #FFD93D;
+  border-radius: 2px;
+}
+
+.equipe-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.membro-equipe {
+  text-align: center;
+  padding: 30px 30px 35px;
+  background: #F8FAFC;
+  border-radius: 20px;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(0,0,0,0.05);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.membro-equipe:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(11, 79, 108, 0.12);
+  border-color: #FFD93D;
+}
+
+/* Container da foto com moldura profissional */
+.membro-foto-container {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  padding: 5px;
+  background: linear-gradient(135deg, #0B4F6C, #1287A8);
+  margin-bottom: 20px;
+  box-shadow: 0 10px 25px rgba(11, 79, 108, 0.25);
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.membro-equipe:hover .membro-foto-container {
+  transform: scale(1.05);
+  box-shadow: 0 15px 35px rgba(255, 217, 61, 0.3);
+  background: linear-gradient(135deg, #FFD93D, #f39c12);
+}
+
+/* Foto única do membro */
+.foto-membro-unica {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid white;
+  transition: all 0.3s ease;
+  display: block;
+}
+
+.membro-equipe h4 {
+  color: #0B4F6C;
+  margin: 15px 0 8px;
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+.membro-equipe p {
+  color: #FFD93D;
+  font-weight: 600;
+  margin-bottom: 8px;
+  font-size: 1.1rem;
+  background: rgba(11, 79, 108, 0.05);
+  padding: 4px 15px;
+  border-radius: 30px;
+  display: inline-block;
+}
+
+.membro-equipe span {
+  color: #64748B;
+  font-size: 0.95rem;
+  display: block;
+  margin-top: 5px;
+}
+
+/* Placeholder caso a imagem não carregue */
+.foto-placeholder {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #0B4F6C20, #1287A820);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 4rem;
+  color: #0B4F6C;
+  border: 3px solid white;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .equipe-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+  
+  .membro-foto-container {
+    width: 160px;
+    height: 160px;
+  }
+  
+  .membro-equipe h4 {
+    font-size: 1.2rem;
+  }
+  
+  .membro-equipe p {
+    font-size: 1rem;
+    padding: 3px 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .equipe-grid {
+    grid-template-columns: 1fr;
+    max-width: 300px;
+    margin: 0 auto;
+  }
+  
+  .membro-foto-container {
+    width: 180px;
+    height: 180px;
+  }
+  
+  .nossa-equipe h2 {
+    font-size: 2rem;
+  }
+  
+  .membro-equipe {
+    padding: 25px 20px 30px;
+  }
+}
+
+
+
+
+
+
+
+
+
+.estatisticas {
+  padding: 80px 0;
+  background: linear-gradient(135deg, #0B4F6C 0%, #064154 100%);
+  color: white;
+  position: relative;
+  overflow: hidden;
+}
+
+.estatisticas::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: repeating-linear-gradient(45deg, rgba(255,255,255,0.02) 0px, rgba(255,255,255,0.02) 10px, transparent 10px, transparent 20px);
+  pointer-events: none;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+}
+
+.stat-item strong {
+  display: block;
+  font-size: 3.5rem;
+  color: #FFD93D;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.stat-item span {
+  font-size: 1.2rem;
+  color: rgba(255,255,255,0.9);
+  font-weight: 500;
+}
+
+.loading {
+  text-align: center;
+  font-size: 1.3rem;
+  color: #0B4F6C;
+  padding: 40px;
+}
+
+.no-equipe {
+  text-align: center;
+  padding: 40px;
+  background: #F8FAFC;
+  border-radius: 15px;
+  color: #64748B;
+  font-size: 1.1rem;
+}
+
+/* Media Queries */
+@media (max-width: 1024px) {
+  .historia-content {
+    gap: 30px;
+  }
+  
+  .image-container {
+    height: 400px;
+  }
+}
+
+@media (max-width: 768px) {
+  .sobre-banner {
+    padding: 60px 0;
+  }
+  
+  .sobre-banner h1 {
+    font-size: 2rem;
+  }
+  
+  .sobre-banner p {
+    font-size: 1.1rem;
+  }
+  
+  .historia-content {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  
+  .historia-text h2 {
+    font-size: 2rem;
+  }
+  
+  .historia-text p {
+    font-size: 1rem;
+  }
+  
+  .image-container {
+    height: 350px;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+  
+  .missao-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+  
+  .stat-item strong {
+    font-size: 2.5rem;
+  }
+  
+  .equipe-grid {
+    grid-template-columns: 1fr;
+    padding: 0 20px;
+  }
+  
+  .nossa-equipe h2 {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .sobre-banner h1 {
+    font-size: 1.8rem;
+  }
+  
+  .sobre-banner p {
+    font-size: 1rem;
+  }
+  
+  .nossa-historia,
+  .nossa-missao,
+  .nossa-equipe,
+  .estatisticas {
+    padding: 50px 0;
+  }
+  
+  .historia-text h2 {
+    font-size: 1.8rem;
+  }
+  
+  .image-container {
+    height: 280px;
+  }
+  
+  .historia-placeholder p {
+    font-size: 1.2rem;
+    padding: 8px 20px;
+    margin-bottom: 20px;
+  }
+  
+  .stats-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  
+  .stat-item strong {
+    font-size: 2rem;
+  }
+  
+  .stat-item span {
+    font-size: 1rem;
+  }
+  
+  .missao-card {
+    padding: 30px 20px;
+  }
+  
+  .foto-membro,
+  .avatar-placeholder {
+    width: 120px;
+    height: 120px;
+  }
+}
+
+
+/* Estilos para o carrossel de 3 imagens por técnico */
+.membro-foto-carrossel {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.membro-foto-principal {
+  width: 100%;
+  height: 200px;
+  border-radius: 15px;
+  overflow: hidden;
+  border: 3px solid #FFD93D;
+  box-shadow: 0 5px 15px rgba(11, 79, 108, 0.2);
+}
+
+.membro-foto-principal .foto-membro {
+  width: 70%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.membro-foto-principal:hover .foto-membro {
+  transform: scale(1.1);
+}
+
+.membro-fotos-secundarias {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  height: 100px;
+}
+
+.foto-membro-secundaria {
+  width: 100%;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 10px;
+  border: 2px solid #0B4F6C;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.foto-membro-secundaria:hover {
+  transform: scale(1.05);
+  border-color: #FFD93D;
+  box-shadow: 0 5px 15px rgba(255, 217, 61, 0.3);
+}
+
+/* Ajustes para mobile */
+@media (max-width: 768px) {
+  .membro-foto-principal {
+    height: 180px;
+  }
+  
+  .membro-fotos-secundarias {
+    height: 80px;
+  }
+  
+  .foto-membro-secundaria {
+    height: 80px;
+  }
+}
+
+@media (max-width: 480px) {
+  .membro-foto-principal {
+    height: 160px;
+  }
+  
+  .membro-fotos-secundarias {
+    height: 70px;
+    gap: 8px;
+  }
+  
+  .foto-membro-secundaria {
+    height: 70px;
+  }
+}
