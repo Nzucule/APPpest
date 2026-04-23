@@ -2,34 +2,38 @@ FROM php:8.2-apache
 
 WORKDIR /var/www/html
 
-# Instalar dependências
+# Dependências PHP
 RUN apt-get update && apt-get install -y \
     git curl zip unzip libpq-dev \
     && docker-php-ext-install pdo pdo_pgsql
 
-# Ativar mod_rewrite
+# Apache mods (IMPORTANTE)
 RUN a2enmod rewrite
 
-# Copiar projeto
+# Copiar app
 COPY . .
 
-# Instalar Composer
+# Composer
 COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
 
-# Instalar Laravel
 RUN composer install --no-dev --optimize-autoloader
 
-# Permissões
+# 🔥 FORÇA Apache a usar public corretamente
+ENV APACHE_DOCUMENT_ROOT /var/www/html/public
+
+RUN sed -ri -e 's!/var/www/html!${APACHE_DOCUMENT_ROOT}!g' /etc/apache2/sites-available/*.conf
+RUN sed -ri -e 's!/var/www/!${APACHE_DOCUMENT_ROOT}!g' /etc/apache2/apache2.conf
+
+# Garantir DirectoryIndex correto
+RUN echo "<Directory /var/www/html/public>\n\
+    AllowOverride All\n\
+    Require all granted\n\
+</Directory>" > /etc/apache2/conf-available/laravel.conf \
+    && a2enconf laravel
+
+# Permissões Laravel
 RUN chown -R www-data:www-data /var/www/html \
-    && chmod -R 755 /var/www/html/storage \
-    && chmod -R 755 /var/www/html/bootstrap/cache
-
-# 🔥 FORÇAR Apache a usar /public
-RUN sed -i 's!/var/www/html!/var/www/html/public!g' /etc/apache2/sites-available/000-default.conf
-RUN sed -i 's!/var/www/html!/var/www/html/public!g' /etc/apache2/apache2.conf
-
-# Garantir index.php
-RUN echo "DirectoryIndex index.php index.html" >> /etc/apache2/apache2.conf
+    && chmod -R 775 storage bootstrap/cache
 
 EXPOSE 80
 
